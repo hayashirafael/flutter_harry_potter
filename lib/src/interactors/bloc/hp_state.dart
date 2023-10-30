@@ -21,7 +21,7 @@ class HpSuccess extends HpState {
 }
 
 class HpError extends HpState {
-  final String? message;
+  final String message;
 
   HpError(this.message);
 }
