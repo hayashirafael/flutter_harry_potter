@@ -13,14 +13,29 @@ class AppErrorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text(errorMessage),
-          ElevatedButton(
-            onPressed: () => context.read<HpBloc>().add(GetAllCharactersEvent()),
-            child: const Text('tentar de novo'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/images/error_image.png',
+              width: 150,
+              height: 150,
+            ), // Substitua pelo seu ícone de erro
+            const SizedBox(height: 16),
+            Text(
+              errorMessage,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () => context.read<HpBloc>().add(GetAllCharactersEvent()),
+              child: const Text('Refresh'),
+            ),
+          ],
+        ),
       ),
     );
   }
