@@ -7,10 +7,10 @@ part 'hp_state.dart';
 class HpBloc extends Bloc<HpEvent, HpState> {
   final IHpService service;
   HpBloc(this.service) : super(HpInitial([])) {
-    on<GetAllCharacters>(_getAllCharacters);
+    on<GetAllCharactersEvent>(_getAllCharacters);
   }
 
-  Future<void> _getAllCharacters(GetAllCharacters event, Emitter<HpState> emit) async {
+  Future<void> _getAllCharacters(GetAllCharactersEvent event, Emitter<HpState> emit) async {
     emit(HpLoading([]));
 
     final data = await service.getAllCharacters();
