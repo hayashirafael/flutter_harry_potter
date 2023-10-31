@@ -12,7 +12,7 @@ class Wand {
   });
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'wood': wood,
       'core': core,
       'length': length,
@@ -21,13 +21,13 @@ class Wand {
 
   factory Wand.fromMap(Map<String, dynamic> map) {
     return Wand(
-      wood: map['wood'] != null ? map['wood'] as String : null,
-      core: map['core'] != null ? map['core'] as String : null,
-      length: map['length'] != null ? map['length'] as num : null,
+      wood: map['wood'],
+      core: map['core'],
+      length: map['length'],
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory Wand.fromJson(String source) => Wand.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory Wand.fromJson(String source) => Wand.fromMap(json.decode(source));
 }
