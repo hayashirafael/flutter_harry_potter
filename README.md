@@ -22,8 +22,8 @@ O aplicativo oferece uma listagem com todos os personagens do Harry Potter com s
 
 ## ⚙️ Funcionalidades
 
-- [x] Listagem de personagens;
-- [x] Descrições de cada personagem;
+- [x] Listagem de personagens
+- [x] Descrições de cada personagem
   
   
 ---
@@ -70,9 +70,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[BloC](https://pub.dev/packages/bloc)**
 -   **[Dio](https://pub.dev/packages/dio)**
-
-
-> Veja o arquivo  [pubspec.yaml](https://github.com/hayashirafael/flutter_harry_potter/blob/main/pubspec.yaml)
 
 **Utilitários**
 
