@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_harry_potter/src/data/models/character.dart';
@@ -19,7 +20,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         '/': (_) => BlocProvider(
               create: (_) => HpBloc(
-                HpService(),
+                HpService(Dio()),
               )..add(GetAllCharactersEvent()),
               child: const HomePage(),
             ),
