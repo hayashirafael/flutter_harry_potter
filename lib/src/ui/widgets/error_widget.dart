@@ -21,7 +21,7 @@ class AppErrorWidget extends StatelessWidget {
               'assets/images/error_image.png',
               width: 150,
               height: 150,
-            ), // Substitua pelo seu ícone de erro
+            ),
             const SizedBox(height: 16),
             Text(
               errorMessage,
