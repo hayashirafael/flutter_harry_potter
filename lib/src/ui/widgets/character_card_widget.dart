@@ -8,12 +8,26 @@ class CharacterCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.all(8.0),
+    return GestureDetector(
+      onTap: () => Navigator.of(context).pushNamed('/character', arguments: character),
       child: ListTile(
-        leading: character.image != null ? Image.network(character.image!) : const SizedBox.shrink(),
-        title: Text(character.name), // Exibir o nome do personagem
-        subtitle: Text(character.house), // Exibir a ocupação do personagem
+        leading: CircleAvatar(
+          backgroundColor: Colors.transparent,
+          radius: 30,
+          child: ClipOval(
+            child: Image.network(
+              character.image!,
+              width: 50,
+              height: 50,
+              errorBuilder: (context, error, stackTrace) {
+                return const Image(image: AssetImage('assets/images/default_image.jpg'));
+              },
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        title: Text(character.name),
+        subtitle: Text(character.house),
       ),
     );
   }

@@ -13,10 +13,14 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: const HomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+      ),
       routes: {
         '/': (_) => BlocProvider(
-              create: (_) => HpBloc(HpService())..add(GetAllCharactersEvent()),
+              create: (_) => HpBloc(
+                HpService(),
+              )..add(GetAllCharactersEvent()),
               child: const HomePage(),
             ),
       },

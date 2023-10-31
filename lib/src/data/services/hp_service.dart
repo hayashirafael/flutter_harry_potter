@@ -12,7 +12,6 @@ class HpService implements IHpService {
       final response = await _dio.get(url);
       var jsonToList = response.data as List;
       var list = jsonToList.map((e) => Character.fromMap(e)).toList();
-      list.sort((a, b) => a.name.compareTo(b.name));
       return list;
     } catch (e) {
       return [];
