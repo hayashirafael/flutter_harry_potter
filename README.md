@@ -71,6 +71,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[BloC](https://pub.dev/packages/bloc)**
 -   **[Dio](https://pub.dev/packages/dio)**
 
+**Arquitetura**
+
+-   Clean Dart: **[Clean Dart 2.0](https://github.com/Flutterando/Clean-Dart/tree/2.0)**
+
 **Utilitários**
 
 -   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
